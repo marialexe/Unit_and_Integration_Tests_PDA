@@ -254,4 +254,11 @@ describe('calculator', function () {
     assert.strictEqual(0,calculator.runningTotal); 
   });
 
+  // testing calculator.clearClick() function 
+  it('can clear the runningTotal value test1', function(){
+    calculator.numberClick(9);
+    calculator.clearClick();
+    assert.strictEqual(0,calculator.runningTotal); 
+  });
+
 });
