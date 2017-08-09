@@ -177,4 +177,12 @@ describe('calculator', function () {
     assert.strictEqual(-120,calculator.runningTotal); 
   });
 
+  // testing calculator.multiply() function 
+  it('can multiply two one digit numbers test', function(){
+    calculator.numberClick(3);
+    calculator.operatorClick('*');
+    calculator.multiply(5);
+    assert.strictEqual(15,calculator.runningTotal);
+  });
+
 });
