@@ -37,4 +37,12 @@ describe('calculator', function () {
     assert.strictEqual(705,calculator.runningTotal);
   });
 
+  // testing calculator.add() function 
+  it('can add two one digit numbers test', function(){
+    calculator.numberClick(7);
+    calculator.operatorClick('+');
+    calculator.add(4);
+    assert.strictEqual(11,calculator.runningTotal);
+  });
+
 });
