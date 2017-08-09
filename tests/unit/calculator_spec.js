@@ -221,4 +221,12 @@ describe('calculator', function () {
     assert.strictEqual(0,calculator.runningTotal);
   });
 
+  // testing calculator.divide() function 
+  it('can divide two one digit numbers test3', function(){
+    calculator.numberClick(7);
+    calculator.operatorClick('/');
+    calculator.divide(0);
+    assert.equal('Error! Division by 0 is NOT a valid operation',calculator.runningTotal);
+  });
+
 });
