@@ -28,4 +28,13 @@ describe('calculator functionality', function() {
     expect(browser.getCurrentUrl()).to.eventually.equal('http://localhost:3000/');
   })
 
+
+  it('should have working number 1 button test', function(){
+    running_total = element(by.css('#running_total'))
+    //element() is a method using a locator
+    element(by.css('#number1')).click();
+    //expect is a validation statement
+    expect(running_total.getAttribute('value')).to.eventually.equal('1')
+  })
+
 });
