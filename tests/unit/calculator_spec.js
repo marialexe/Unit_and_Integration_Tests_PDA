@@ -194,4 +194,14 @@ describe('calculator', function () {
     assert.strictEqual(200,calculator.runningTotal);
   });
 
+  // testing calculator.multiply() function 
+  it('can multiply two three digits numbers test', function(){
+    calculator.numberClick(5);
+    calculator.numberClick(0);
+    calculator.numberClick(0);
+    calculator.operatorClick('*');
+    calculator.multiply(100);
+    assert.strictEqual(50000,calculator.runningTotal);
+  });
+
 });
