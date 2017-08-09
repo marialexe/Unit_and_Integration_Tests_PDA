@@ -238,4 +238,14 @@ describe('calculator', function () {
     assert.strictEqual(0.5,calculator.runningTotal);
   });
 
+  // testing calculator.divide() function 
+  it('can divide two three digits numbers test', function(){
+    calculator.numberClick(5);
+    calculator.numberClick(0);
+    calculator.numberClick(0);
+    calculator.operatorClick('/');
+    calculator.divide(100);
+    assert.strictEqual(5,calculator.runningTotal);
+  });
+
 });
