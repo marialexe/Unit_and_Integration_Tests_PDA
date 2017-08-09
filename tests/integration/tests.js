@@ -43,4 +43,10 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
   })
 
+  it('should have working number 3 button test', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.partialButtonText('3')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('3')
+  })
+
 });
