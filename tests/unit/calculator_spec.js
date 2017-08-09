@@ -248,4 +248,10 @@ describe('calculator', function () {
     assert.strictEqual(5,calculator.runningTotal);
   });
 
+  // testing calculator.clearClick() function 
+  it('can clear the runningTotal value test0', function(){
+    calculator.clearClick();
+    assert.strictEqual(0,calculator.runningTotal); 
+  });
+
 });
