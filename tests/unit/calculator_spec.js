@@ -92,4 +92,12 @@ describe('calculator', function () {
     assert.strictEqual(375,calculator.runningTotal); 
   });
 
+  // testing calculator.subtract() function 
+  it('can subtract two one digit numbers test', function(){
+    calculator.numberClick(7);
+    calculator.operatorClick('-');
+    calculator.subtract(4);
+    assert.strictEqual(3,calculator.runningTotal);
+  });
+
 });
