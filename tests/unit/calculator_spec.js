@@ -213,4 +213,12 @@ describe('calculator', function () {
     assert.strictEqual(3,calculator.runningTotal);
   });
 
+  // testing calculator.divide() function 
+  it('can divide two one digit numbers test2', function(){
+    calculator.numberClick(0);
+    calculator.operatorClick('/');
+    calculator.divide(7);
+    assert.strictEqual(0,calculator.runningTotal);
+  });
+
 });
