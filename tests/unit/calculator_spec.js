@@ -204,4 +204,13 @@ describe('calculator', function () {
     assert.strictEqual(50000,calculator.runningTotal);
   });
 
+  // testing calculator.divide() function 
+  it('can divide two one digit numbers test', function(){
+    calculator.numberClick(2);
+    calculator.numberClick(1);
+    calculator.operatorClick('/');
+    calculator.divide(7);
+    assert.strictEqual(3,calculator.runningTotal);
+  });
+
 });
