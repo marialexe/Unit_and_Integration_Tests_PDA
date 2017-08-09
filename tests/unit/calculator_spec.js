@@ -154,4 +154,18 @@ describe('calculator', function () {
     assert.strictEqual(-45,calculator.runningTotal); 
   });
 
+  // testing calculator.operatorClick() function 
+  it('can subtract and add multiple positive numbers test', function(){ 
+    calculator.numberClick(4);
+    calculator.numberClick(0);
+    calculator.operatorClick('-');
+    calculator.numberClick(2);
+    calculator.numberClick(5);
+    calculator.operatorClick('=');
+    calculator.operatorClick('+');
+    calculator.numberClick(5);
+    calculator.operatorClick('=');
+    assert.strictEqual(20,calculator.runningTotal); 
+  });
+
 });
