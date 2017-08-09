@@ -75,4 +75,21 @@ describe('calculator', function () {
     assert.strictEqual(90,calculator.runningTotal);
   });
 
+  // testing calculator.add() function 
+  it('can add multiple positive numbers test', function(){ 
+    calculator.numberClick(1);
+    calculator.numberClick(0);
+    calculator.numberClick(0);
+    calculator.operatorClick('+');
+    calculator.numberClick(2);
+    calculator.numberClick(5);
+    calculator.numberClick(0);
+    calculator.operatorClick('=');
+    calculator.operatorClick('+');
+    calculator.numberClick(2);
+    calculator.numberClick(5);
+    calculator.operatorClick('=');
+    assert.strictEqual(375,calculator.runningTotal); 
+  });
+
 });
