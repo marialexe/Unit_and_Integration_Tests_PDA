@@ -185,4 +185,13 @@ describe('calculator', function () {
     assert.strictEqual(15,calculator.runningTotal);
   });
 
+  // testing calculator.multiply() function 
+  it('can multiply two two digits numbers test', function(){
+    calculator.numberClick(1);
+    calculator.numberClick(0);
+    calculator.operatorClick('*');
+    calculator.multiply(20);
+    assert.strictEqual(200,calculator.runningTotal);
+  });
+
 });
