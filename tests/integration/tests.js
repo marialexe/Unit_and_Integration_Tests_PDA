@@ -24,4 +24,8 @@ describe('calculator functionality', function() {
     expect(browser.getCurrentUrl()).to.eventually.contain('3000');
   })
 
+  it('should have the correct url test2', function(){
+    expect(browser.getCurrentUrl()).to.eventually.equal('http://localhost:3000/');
+  })
+
 });
