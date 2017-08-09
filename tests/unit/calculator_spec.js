@@ -54,4 +54,14 @@ describe('calculator', function () {
     assert.strictEqual(100,calculator.runningTotal);
   });
 
+  // testing calculator.add() function 
+  it('can add two three digits numbers test', function(){
+    calculator.numberClick(5);
+    calculator.numberClick(5);
+    calculator.numberClick(5);
+    calculator.operatorClick('+');
+    calculator.add(444);
+    assert.strictEqual(999,calculator.runningTotal);
+  });
+
 });
