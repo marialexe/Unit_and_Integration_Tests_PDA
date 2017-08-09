@@ -29,4 +29,12 @@ describe('calculator', function () {
     assert.strictEqual(74,calculator.runningTotal);
   });
 
+  // testing calculator.numberClick() function 
+  it('can click a three digit number test', function(){
+    calculator.numberClick(7);
+    calculator.numberClick(0);
+    calculator.numberClick(5);
+    assert.strictEqual(705,calculator.runningTotal);
+  });
+
 });
