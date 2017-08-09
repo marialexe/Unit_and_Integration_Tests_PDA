@@ -168,4 +168,13 @@ describe('calculator', function () {
     assert.strictEqual(20,calculator.runningTotal); 
   });
 
+  // testing calculator.subtract() function 
+  it('can subtract and add multiple positive numbers test2', function(){ 
+    calculator.subtract(125);
+    calculator.operatorClick('=');
+    calculator.add(5);
+    calculator.operatorClick('=');
+    assert.strictEqual(-120,calculator.runningTotal); 
+  });
+
 });
