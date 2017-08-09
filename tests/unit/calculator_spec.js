@@ -64,4 +64,15 @@ describe('calculator', function () {
     assert.strictEqual(999,calculator.runningTotal);
   });
 
+  // testing calculator.add() function 
+  it('can add multiple numbers test', function(){
+    calculator.add(50);
+    calculator.operatorClick('=');
+    calculator.add(30);
+    calculator.operatorClick('=');
+    calculator.add(10);
+    calculator.operatorClick('=');
+    assert.strictEqual(90,calculator.runningTotal);
+  });
+
 });
