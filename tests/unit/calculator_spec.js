@@ -285,5 +285,20 @@ describe('calculator', function () {
       assert.strictEqual(3,calculator.runningTotal); 
     });
 
-
+  // testing calculator.clearClick() function 
+    it('can clear the runningTotal value test4', function(){
+      calculator.numberClick(5);
+      calculator.operatorClick('*');
+      calculator.numberClick(9);
+      calculator.operatorClick('=');
+      calculator.operatorClick('+');
+      calculator.numberClick(1);
+      calculator.numberClick(0);
+      calculator.operatorClick('=');
+      calculator.operatorClick('-');
+      calculator.numberClick(5);
+      calculator.clearClick();
+      calculator.operatorClick('=');
+      assert.strictEqual(55,calculator.runningTotal); 
+    });
 });
