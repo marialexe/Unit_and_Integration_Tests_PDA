@@ -109,4 +109,14 @@ describe('calculator', function () {
     assert.strictEqual(45,calculator.runningTotal);
   });
 
+  // testing calculator.subtract() function 
+  it('can subtract two three digit numbers test', function(){
+    calculator.numberClick(9);
+    calculator.numberClick(9);
+    calculator.numberClick(9);
+    calculator.operatorClick('-');
+    calculator.subtract(222);
+    assert.strictEqual(777,calculator.runningTotal);
+  });
+
 });
