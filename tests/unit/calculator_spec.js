@@ -119,4 +119,15 @@ describe('calculator', function () {
     assert.strictEqual(777,calculator.runningTotal);
   });
 
+  // testing calculator.subtract() function 
+  it('can subtract a higher number from a smaller number test', function(){
+    calculator.numberClick(3);
+    calculator.numberClick(5);
+    calculator.operatorClick('-');
+    calculator.numberClick(5);
+    calculator.numberClick(5);
+    calculator.subtract(55);
+    assert.strictEqual(-20,calculator.runningTotal);
+  });
+
 });
