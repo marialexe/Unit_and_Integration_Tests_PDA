@@ -229,4 +229,13 @@ describe('calculator', function () {
     assert.equal('Error! Division by 0 is NOT a valid operation',calculator.runningTotal);
   });
 
+  // testing calculator.divide() function 
+  it('can divide two two digits numbers test', function(){
+    calculator.numberClick(2);
+    calculator.numberClick(0);
+    calculator.operatorClick('/');
+    calculator.divide(40);
+    assert.strictEqual(0.5,calculator.runningTotal);
+  });
+
 });
