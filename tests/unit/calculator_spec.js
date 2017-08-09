@@ -143,4 +143,15 @@ describe('calculator', function () {
     assert.strictEqual(7,calculator.runningTotal); 
   });
 
+  // testing calculator.subtract() function 
+  it('can subtract multiple positive numbers test2', function(){ 
+    calculator.subtract(25);
+    calculator.operatorClick('=');
+    calculator.subtract(5);
+    calculator.operatorClick('=');
+    calculator.subtract(15);
+    calculator.operatorClick('=');
+    assert.strictEqual(-45,calculator.runningTotal); 
+  });
+
 });
