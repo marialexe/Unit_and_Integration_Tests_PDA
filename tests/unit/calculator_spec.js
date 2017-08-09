@@ -130,4 +130,17 @@ describe('calculator', function () {
     assert.strictEqual(-20,calculator.runningTotal);
   });
 
+  // testing calculator.operatorClick() function 
+  it('can subtract multiple positive numbers test', function(){ 
+    calculator.numberClick(1);
+    calculator.numberClick(5);
+    calculator.operatorClick('-');
+    calculator.numberClick(3);
+    calculator.operatorClick('=');
+    calculator.operatorClick('-');
+    calculator.numberClick(5);
+    calculator.operatorClick('=');
+    assert.strictEqual(7,calculator.runningTotal); 
+  });
+
 });
