@@ -45,4 +45,13 @@ describe('calculator', function () {
     assert.strictEqual(11,calculator.runningTotal);
   });
 
+  // testing calculator.add() function 
+  it('can add two two digits numbers test', function(){
+    calculator.numberClick(2);
+    calculator.numberClick(5);
+    calculator.operatorClick('+');
+    calculator.add(75);
+    assert.strictEqual(100,calculator.runningTotal);
+  });
+
 });
