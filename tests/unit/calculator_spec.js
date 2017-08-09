@@ -100,4 +100,13 @@ describe('calculator', function () {
     assert.strictEqual(3,calculator.runningTotal);
   });
 
+  // testing calculator.subtract() function 
+  it('can subtract two two digit numbers test', function(){
+    calculator.numberClick(7);
+    calculator.numberClick(0);
+    calculator.operatorClick('-');
+    calculator.subtract(25);
+    assert.strictEqual(45,calculator.runningTotal);
+  });
+
 });
