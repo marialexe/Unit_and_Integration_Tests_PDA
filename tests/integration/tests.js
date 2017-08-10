@@ -178,4 +178,16 @@ describe('calculator functionality', function() {
     element(by.css('#operator_equals')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('2');
   })
+
+  it('should correctly update the running total when using decimal numbers test1', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.buttonText('3')).click();
+    element(by.buttonText('7')).click();
+    element(by.buttonText('/')).click();
+    element(by.buttonText('4')).click();
+    element(by.buttonText('*')).click();
+    element(by.buttonText('5')).click();
+    element(by.buttonText('=')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('46.25');
+  })
 });
