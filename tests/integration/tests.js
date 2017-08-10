@@ -77,4 +77,15 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('10');
   })
 
+  it('should correctly update the running total when clicking the add operator test2', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number7')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#operator_add')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('85');
+  })
+
 });
