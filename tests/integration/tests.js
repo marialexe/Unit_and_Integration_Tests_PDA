@@ -148,4 +148,18 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('26');
   })
 
+  it('should correctly update the running total when chaining multiple operations together test1', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.buttonText('9')).click();
+    element(by.buttonText('/')).click();
+    element(by.buttonText('3')).click();
+    element(by.buttonText('*')).click();
+    element(by.buttonText('2')).click();
+    element(by.buttonText('-')).click();
+    element(by.buttonText('5')).click();
+    element(by.buttonText('+')).click();
+    element(by.buttonText('7')).click();
+    element(by.buttonText('=')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('8');
+  })
 });
