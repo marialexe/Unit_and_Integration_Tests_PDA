@@ -58,4 +58,14 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('456')
   })
 
+  it('should update the running total when clicking buttons test2', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number7')).click();
+    element(by.css('#number8')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('78');
+    element(by.css('#number9')).click();
+    element(by.css('#number0')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('7890')
+  })
+
 });
