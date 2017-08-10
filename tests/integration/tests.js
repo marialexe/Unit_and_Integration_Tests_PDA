@@ -281,4 +281,14 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('97546105780231670000');
   })
 
+  it('should output Error when divide by 0 test1', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number9')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('Error! Division by 0 is NOT a valid operation');
+  })
+
 });
